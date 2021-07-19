@@ -1,3 +1,3 @@
 <footer class="container mt-5">
-    <h2>&hearts; Comics</h2>
+    <h4 class="text-center">&hearts; Comics</h4>
 </footer>
