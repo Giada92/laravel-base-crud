@@ -31,5 +31,7 @@
 
         {{-- JS --}}
         <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.js' integrity='sha512-nw7zwODD4UD9u/C/CO+03s7jXvOZDomBNFX3oOq7Xv0stAyxsxhJzVlxsRTgH3AxK3sK2ijMQou2aSIaorp19g==' crossorigin='anonymous'></script>
+        
+        <script src="{{ asset('js/script.js') }}"></script>
     </body>
 </html>

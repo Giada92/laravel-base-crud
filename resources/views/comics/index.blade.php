@@ -2,6 +2,12 @@
 
 @section('main-content')
     <h2>Elenco Fumetti</h2>
+
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     
     <table class="table my-5">
         <thead>
@@ -24,7 +30,16 @@
                     <td>
                         <a class="btn btn-secondary" href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
                     </td>
-                    <td>DELETE</td>
+                    <td>
+                        <form 
+                            method="POST" 
+                            action="{{ route('comics.destroy', $comic->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" class="btn btn-danger" id="prova" value="DELETE"
+                            onClick='confirmSubmit()'>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
