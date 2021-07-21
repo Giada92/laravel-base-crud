@@ -2,6 +2,7 @@
 
 @section('main-content')
     <h2>{{ $comic->title }}</h2>
+    <a class="btn btn-secondary" href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
     <div class="row my-5">
         <div class="col-3">
           <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
